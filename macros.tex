@@ -1,0 +1,51 @@
+% Macros y ambientes comunes.
+% La idea es que todos usen los mismos ambientes para mantener formato consistente.
+
+% Conjuntos frecuentes
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+% Operadores frecuentes
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\iiintD}{\iiint_D}
+\newcommand{\iintD}{\iint_D}
+
+% Numeración automática de ejercicios
+\newcounter{ejercicio}
+
+\newenvironment{ejercicio}[1][]
+{%
+    \refstepcounter{ejercicio}%
+    \begin{tcolorbox}[
+        breakable,
+        colback=white,
+        colframe=black!55,
+        title={Ejercicio \theejercicio\if\relax\detokenize{#1}\relax\else: #1\fi}
+    ]
+}
+{%
+    \end{tcolorbox}
+}
+
+\newenvironment{solucion}
+{%
+    \begin{proof}[Solución]
+}
+{%
+    \end{proof}
+}
+
+\newenvironment{observacion}
+{%
+    \begin{tcolorbox}[
+        breakable,
+        colback=black!3,
+        colframe=black!30,
+        title={Observación}
+    ]
+}
+{%
+    \end{tcolorbox}
+}

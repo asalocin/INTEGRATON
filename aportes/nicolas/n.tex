@@ -1,0 +1,48 @@
+\subsection{Aportes de Nicolás}
+
+% Regla: Nicolás escribe sus ejercicios y soluciones en este archivo.
+% No agregar \documentclass, \begin{document} ni \end{document} aquí.
+
+\begin{ejercicio}[Integral doble en una región triangular]
+Calcule
+\[
+    \iint_D (x+y)\dd A,
+\]
+donde \(D\) es la región limitada por las rectas
+\[
+    x=0, \qquad y=0, \qquad x+y=1.
+\]
+\end{ejercicio}
+
+\begin{solucion}
+La región \(D\) puede describirse mediante las desigualdades
+\[
+    0\leq x\leq 1,
+    \qquad
+    0\leq y\leq 1-x.
+\]
+Por lo tanto,
+\[
+    \iint_D (x+y)\dd A
+    =
+    \int_0^1\int_0^{1-x}(x+y)\dd y\dd x.
+\]
+Calculamos primero la integral interior:
+\[
+    \int_0^{1-x}(x+y)\dd y
+    =
+    \left[xy+\frac{y^2}{2}\right]_0^{1-x}
+    =
+    x(1-x)+\frac{(1-x)^2}{2}.
+\]
+Luego,
+\[
+    \int_0^1\left(x(1-x)+\frac{(1-x)^2}{2}\right)\dd x
+    =
+    \frac{1}{3}.
+\]
+Así,
+\[
+    \boxed{\iint_D (x+y)\dd A=\frac{1}{3}}.
+\]
+\end{solucion}
