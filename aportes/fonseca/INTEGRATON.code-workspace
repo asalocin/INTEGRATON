@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"latex-workshop.view.pdf.viewer": "tab",
+		"files.associations": {
+			"*.tex": "latex"
+		}
+	}
+}
